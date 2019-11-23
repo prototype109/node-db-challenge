@@ -5,6 +5,9 @@
   "repository": "https://github.com/prototype109/node-db-challenge.git",
   "author": "Brandon Nichols <brandonaronnichols@gamil.com>",
   "license": "MIT",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "knex": "^0.20.2",
