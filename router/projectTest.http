@@ -1,0 +1,12 @@
+@url=http://localhost:4000/projects
+
+### POST REQUEST
+POST {{url}}/
+Content-Type: application/json
+
+{
+    "projectName" : "TEST"
+}
+
+### GET REQUEST
+GET {{url}}/
