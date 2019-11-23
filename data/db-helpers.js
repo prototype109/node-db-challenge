@@ -33,9 +33,9 @@ function getResources() {
 function getTasks() {
   return db
     .select(
+      "t.*",
       "projectName as Project",
-      "p.description as Project Description",
-      "t.*"
+      "p.description as Project Description"
     )
     .from("tasks as t")
     .join("projects as p", "p.id", "=", "t.projectId");

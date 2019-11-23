@@ -13,7 +13,7 @@ POST {{url}}/1
 Content-Type: application/json
 
 {
-    "description" : "completed it",
+    "description" : "completed it again",
     "completed" : true
 }
 

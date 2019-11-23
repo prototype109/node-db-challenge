@@ -6,7 +6,7 @@ const project = express.Router();
 project.get("/", async (req, res) => {
   try {
     const projects = await db.getProjects();
-    res.status(200).json(projects);
+    res.status(200).json(fixCompleteDisplay(projects));
   } catch (error) {
     res.status(500).json(error);
   }
@@ -29,6 +29,18 @@ function validateProject(req, res, next) {
   } else {
     next();
   }
+}
+
+function fixCompleteDisplay(projects) {
+  const fixedCompleted = projects.map(project => {
+    if (project.completed === "false") {
+      project.completed = false;
+    } else {
+      project.completed = true;
+    }
+    return project;
+  });
+  return fixedCompleted;
 }
 
 module.exports = project;
