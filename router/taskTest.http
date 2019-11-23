@@ -1,0 +1,21 @@
+@url=http://localhost:4000/tasks
+
+### POST REQUEST
+POST {{url}}/1
+Content-Type: application/json
+
+{
+    "description" : "task description"
+}
+
+### POST REQUEST COMPLETED TRUE
+POST {{url}}/1
+Content-Type: application/json
+
+{
+    "description" : "completed it again",
+    "completed" : true
+}
+
+### GET REQUEST
+GET {{url}}/
